@@ -1,8 +1,9 @@
 import os
 import unittest
 import sys
-#sys.path.append('/Users/seungwookim/Desktop/ksw/study/test-env/flask-server-test-v4/app')
+# app 폴더를 패키지로 인식하게끔 path 등록
 sys.path.append(os.path.dirname(os.path.realpath(__file__))+'/app')
+
 from flask_migrate import Migrate, MigrateCommand
 from flask_script import Manager
 
@@ -41,8 +42,3 @@ def test():
 
 if __name__ == '__main__':
     manager.run()
-
-'''
-if __name__ == "__main__":
-  app.run(debug=True, host="0.0.0.0", port=80)
-'''
